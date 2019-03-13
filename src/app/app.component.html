@@ -1,14 +1,4 @@
-<div>
-  <mat-card class="smallcard">
-    <mat-card-header>
-      <mat-card-title>{{cardTitle}}</mat-card-title>
-      <mat-card-subtitle>{{cardSubtitle}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{cardContent}}</p>
-    </mat-card-content>
-  </mat-card>
+<div *ngFor="let rest of rests">
+  <app-rest-card [restaurant]="rest"></app-rest-card>
 </div>
-
-
 <router-outlet></router-outlet>
