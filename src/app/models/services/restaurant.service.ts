@@ -8,7 +8,6 @@ import {MessageService} from './message.service';
 })
 export class RestaurantService {
   restaurants: Restaurant[];
-  dummy: Restaurant[];
   constructor(private messageService: MessageService) {
     // TODO Replace with Api call
     this.restaurants = [
