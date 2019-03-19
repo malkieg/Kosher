@@ -12,7 +12,7 @@
       <p *ngIf="restaurant.rating">Rated: {{restaurant.rating}}</p>
       <p *ngIf="restaurant.avgMealPrice">Average Meal Price: {{restaurant.avgMealPrice}}</p>
 
-      <div *ngIf="restaurant.location"><b>Address:</b>
+      <div *ngIf="restaurant.location">Address:
       {{restaurant.location.streetNumber}}{{restaurant.location.apartment}} {{restaurant.location.streetName}} <br>{{restaurant.location.city}} {{restaurant.location.province}} <br>{{restaurant.location.postalCode}} {{restaurant.location.country}}
       </div>
     </mat-card-content>

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Restaurant} from '../restaurant';
 import {Observable, of} from 'rxjs';
+import {MessageService} from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantService {
   restaurants: Restaurant[];
-  constructor() {
+  dummy: Restaurant[];
+  constructor(private messageService: MessageService) {
     // TODO Replace with Api call
     this.restaurants = [
       new Restaurant({
@@ -69,6 +71,7 @@ export class RestaurantService {
     ];
   }
   getRestaurants(): Observable<Restaurant[]> {
+    this.messageService.add('object constructed');
     return of(this.restaurants);
 }
 }
