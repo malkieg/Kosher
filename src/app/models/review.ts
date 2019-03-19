@@ -6,4 +6,13 @@ export class Review {
   body: string;
   date: Date;
   // endregion
+  constructor(args?) {
+    if (args) {
+      this.author = args.author;
+      this.rating = args.rating;
+      this.title = args.title;
+      this.body = args.body;
+      this.date = args.date;
+    }
+  }
 }

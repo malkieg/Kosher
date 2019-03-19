@@ -15,11 +15,15 @@ export class Restaurant {
   // endregion
   // region Default Methods
   constructor(args?) {
-    this.name = args.name;
-    this.website = args.website;
-    this.phone = args.phone;
-    this.avgMealPrice = args.avgMealPrice;
-    this.rating = args.rating;
+    if (args) {
+      this.name = args.name;
+      this.website = args.website;
+      this.phone = args.phone;
+      this.avgMealPrice = args.avgMealPrice;
+      this.rating = args.rating;
+      this.reviews = args.Review;
+      this.location = args.location;
+    }
   }
   // endregion
 }
