@@ -12,5 +12,3 @@ export class MessageService {
     this.messages = [];
   }
 }
-
-
